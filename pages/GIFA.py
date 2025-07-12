@@ -7,8 +7,9 @@ st.set_page_config(
     layout="wide"
 )
 
+
 # Caminho do Excel
-pasta_datasets = Path(__file__).parent/ 'processos'
+pasta_datasets = Path(__file__).parent.parent / 'processos'
 arquivo_excel = pasta_datasets / 'GIFA - DATA E ID.xlsx'
 df_gifa = pd.read_excel(arquivo_excel, dtype={'CPF': str, 'ID': str})
 
